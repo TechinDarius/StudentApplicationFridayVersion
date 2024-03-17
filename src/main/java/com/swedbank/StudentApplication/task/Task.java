@@ -43,7 +43,7 @@ public class Task {
 
     //Namu darbai
     @ManyToOne
-    @JoinColumn(name = "group_id", nullable = true)
+    @JoinColumn(name = "id", nullable = true)
     @JsonIgnore
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
