@@ -20,13 +20,11 @@ public class TaskController {
 
     }
 
-
     @GetMapping
     public ResponseEntity <List<Task>> findAll(){
         List <Task> tasks = service.findAll();
         return new ResponseEntity<>(tasks,HttpStatus.OK);
     }
-
 
     @GetMapping("/{id}")
     public ResponseEntity <Task> findById(@PathVariable("id") Long id)
@@ -34,7 +32,6 @@ public class TaskController {
         Task updatedTask = service.findById(id);
         return new ResponseEntity<Task>(updatedTask,HttpStatus.OK);
     }
-
 
     @PutMapping
     public ResponseEntity<Void> updateTask(@RequestBody Task task) {
